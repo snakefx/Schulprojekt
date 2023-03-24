@@ -16,7 +16,7 @@
             padding-left: 20px;
             padding-right: 40px;
             left: 20%;
-            width: 70%;
+            width: 71%;
             height: 60px;
             padding-top: 10px;
         }
