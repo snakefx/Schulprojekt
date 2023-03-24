@@ -78,8 +78,10 @@ UM link zu neuen html file zu erstellen in routes/web neue route erstellen bsp. 
 
 hbeim obrigen ist was in den erseten '' zeichen ist der url link und was im zweiten''ist die funktion im ShipController (siehe unten)
 
-danach in app/Http/controllers/Shipcontroller eine neue function erstellen bsp: public function show_function()
+danach in app/Http/controllers/Shipcontroller eine neue function erstellen bsp: 
 
+
+                                                                                public function show_function()s
                                                                                {
 
                                                                                         return view("shipsink/show_file"); // shipsink verweist auf den shipsink folder in ressources/views
