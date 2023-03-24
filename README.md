@@ -65,3 +65,27 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # Schulprojekt
+HTML:
+Html_file in ressources/views/shipsink/show.blade.php bitte wenn möglich neue html files in shipsink lassen
+
+Das main layout worauf shipsink/show basiert ist in resressources/views/layouts/app.blade.php
+
+Bei neuen html files .blade.php ans ende schreiben anstatt .html um das main layout zu verwendn <x-app-layout> an den anfang und </x-app-layout> ans ende schreiben
+JavaScript:
+Javascript file in public/javascript/ship.js bitte wenn möglich neue html files in JavaScript folder lassen (meines wissen müssen js files sogar in public sein)
+
+UM link zu neuen html file zu erstellen in routes/web neue route erstellen bsp. Route::get('ship/show_URL', [ShipController::class, 'show_function']);
+hbeim obrigen ist was in den erseten '' zeichen ist der url link und was im zweiten''ist die funktion im ShipController (siehe unten)
+danach in app/Http/controllers/Shipcontroller eine neue function erstellen bsp: public function show_function()
+                                                                               {
+                                                                                        return view("shipsink/show_file"); // shipsink verweist auf den shipsink folder in ressources/views
+                                                                                                                            // show_enemie verweist auf das show_enemie.blade.php file im shipsink folder
+                                                                                                                            //also name des ordners und der datei hinschreiben (nicht vom ulr link)
+                                                                                }
+Glückwunsch nun könnt ihr die Url http://127.0.0.1:8000/ship/show_URL nutzen um das file show_file.balde.php im browser anzusehen
+(das _URL; _function; _file; muss nicht so genannt werden und exestieren auch nicht so im projekt ist nur zur anschauung )
+
+Um die files im browser anschauen zu können schreibt in terminal     php artian serve     um einen testserver laufen zu lassen gibt http://127.0.0.1:8000 als url ein und ihr solltet zum projekt kommen
+(die erste seite die ihr sehen werdet ist unwichtig regestriert euch um zum wichtigen teil zu kommen)
+
+ihr braucht php und composer um laravel zu nutzen (warscheinlich)
