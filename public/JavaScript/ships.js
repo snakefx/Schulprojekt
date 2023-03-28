@@ -1,4 +1,3 @@
-const AllChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];//List of all Chars in the table 
 var SmallShips = { // hier wird die shiffsposition gespeichert jedes shiff ist ein objekt (also ship1,ship2,ship3) die anzahl der objekt (also schiffe) hängt von der anzahl der platzierbaren schiffe ab.
   ship1: ["0", "0"],// Jedes Objekt ist ein array die länge der arrays hängt von der größe des schiffs ab
   ship2: ["0", "0"],

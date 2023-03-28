@@ -81,7 +81,8 @@ hbeim obrigen ist was in den erseten '' zeichen ist der url link und was im zwei
 danach in app/Http/controllers/Shipcontroller eine neue function erstellen bsp: 
 
 
-                                                                                public function show_function()s
+
+                                                                                public function show_function()
                                                                                {
 
                                                                                         return view("shipsink/show_file"); // shipsink verweist auf den shipsink folder in ressources/views
