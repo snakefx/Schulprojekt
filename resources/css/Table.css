@@ -1,0 +1,41 @@
+table { /* css fürs styling*/
+    color: #86b300;
+    background-color: black;
+    border: none;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+th {
+    border-color: greenyellow;
+    border-style: solid;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+td {
+    border-color: greenyellow;
+    border-style: outset;
+    padding: 0px;
+    margin: 0px;
+}
+.shipbutton {
+    color:#39e600;
+    background-color: black;
+    border: none;
+    padding: 5px;
+    margin: 0px;
+    width: 65px;
+    height: 45px;
+}
+.NumberInTable {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+}
+#SmallShipButton:active {
+    background-color: #009900;
+}
+label{
+    color: rgb(238, 115, 15);
+}

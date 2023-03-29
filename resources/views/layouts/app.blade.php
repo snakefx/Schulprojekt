@@ -326,7 +326,7 @@
                         <li><a href="">This does nothin</a></li>
                         <li><a href="">This does nothin</a></li>
                         <li><a href="">This does nothin</a></li>
-                        <li><a href="">Dont press me(you were warned!)</a></li>
+                        <li><a href="">This does nothin</a></li>
                     </ul>
                 </div>
             </a>
@@ -349,7 +349,7 @@
                         <a href="">nothin here</a>
                     </div>
                     <ul class="submenu">
-                        <li><a href="">This does nothin/a></li>
+                        <li><a href="">This does nothin</a></li>
                         <li><a href="">This does nothin</a></li>
                         <li><a href="">This does nothin</a></li>
                         <li><a href="">This does nothin</a></li>
