@@ -385,41 +385,6 @@
             {{ $slot }}
         </div>
 
-        <!--<div class="main">
-            <input class="w3-input w3-border w3-light-grey" type="search"
-                style="border-radius: 100px; width:35%;height:5%; position:relative; left:60%"
-                placeholder="&#x1f50d Suchen">
-            <br>
-            <video controls style="width:100%; border-radius: 14px;">
-                <source src="/videos/Testvideo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="StandardBox" style="height:325px;">
-                <h1> Beschreibung </h1>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua.
-                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua.
-                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    sanctus est Lorem ipsum dolor sit amet.
-                </p>
-            </div>
-            
-        </div>-->
-
-
-
-
-
-        <!--<a href="#" class="w3-bar-item w3-button">
-                        <video controls style="width:20%; border-radius: 20px;">
-                            <source src="/storage/uploads/Testvideo-1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </a><br><br>
-                    <a href="#" class="w3-bar-item w3-button">Link</a>-->
     </div>
     </div>
     </div>

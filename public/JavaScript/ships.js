@@ -78,7 +78,7 @@ function NotMarked(place) { // hier wird getestet ob ein feld belegt ist false =
         marked = false;
       }
     }
-  }
+  }   
   return marked;
 }
 function ChangeAlignment(current) { // für die radio buttons
