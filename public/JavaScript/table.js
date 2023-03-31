@@ -19,11 +19,7 @@ function CreateTableHeader(Size) {
             }
             var td= tr.insertCell(0);
             td.innerHTML = "";
-
         }
-       
-        
-    
 }}
 function CreateContent(Size, Number){
     console.log("content"+Size + "number="+Number);
