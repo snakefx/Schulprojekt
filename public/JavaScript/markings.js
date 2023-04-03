@@ -28,6 +28,15 @@ function NotMarked(place) { // hier wird getestet ob ein feld belegt ist false =
     }   
   return marked;
 }
+function ShotIndicator(place){
+  document.getElementById("2"+place).style.backgroundColor = "yellow";
+}
+function RemoveShotIndicator(){
+  document.getElementById("2"+place).style.backgroundColor = "black";
+}
+function shoot(){//here comes the code for the shooting
+  document.getElementById("2"+place).style.backgroundColor = "red";
+}
 function RemovePlacementIndicator(place) { // hier wird die markierung zurückgesetzt sobald der mausziger das feld verlässt (funktioniert noch nicht perfekt)
   if (Buttonpressed === 1){
     if (NotMarked(place))

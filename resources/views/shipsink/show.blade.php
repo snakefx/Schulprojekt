@@ -9,10 +9,14 @@
         <input type="radio" name="horizontal" id="h" onclick="ChangeAlignment('h')"/>
         <label for="vertical">Vertical</label>
         <input type="radio" name="vertical" id="v" onclick="ChangeAlignment('v')"/>
-        
-        <table id="table">
-
+        <div class="Player1">
+        <table id="table1">
         </table>
+        </div>
+        <div class="Player1">
+        <table id="table2">
+        </table>
+        </div>
         <script src="/JavaScript/table.js"></script>
         <script src="/JavaScript/other.js"></script>
         <script src="/Javascript/markings.js"></script>
