@@ -143,7 +143,7 @@
         .main {
             flex: 82%;
             height: 995px;
-            overflow: scroll;
+            overflow: auto;
             padding: 20px;
             justify-content: flex-start;
         }

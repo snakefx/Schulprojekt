@@ -15,6 +15,7 @@ function CreateTableHeader(Size) {
             
              
              var td= tr.insertCell(0);
+             td.setAttribute("class","TableHeader");
              td.innerHTML = AllChars[counter2];
             }
             var td= tr.insertCell(0);
@@ -26,9 +27,10 @@ function CreateContent(Size, Number){
     table = document.getElementById(`table`);
     var tr = table.insertRow(0);
     var td = tr.insertCell(0);
+    td.setAttribute("class","NumberInTable");
     td.innerHTML= (Number);
     for(counter2 = 1;counter2 < Size;counter2++){
-        let pos = Number+AllChars[counter2];
+        let pos = Number+AllChars[counter2-1];
         var td = tr.insertCell(counter2);
         let content= `<button onmouseout="RemovePlacementIndicator('${pos}')" onmouseover="PlacementIndicator('${pos}')"\
         onclick="TableClick('${pos}')" id="${pos}" class="shipbutton"> </button>`
