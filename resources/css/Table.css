@@ -5,11 +5,12 @@ table { /* css fürs styling*/
     border-collapse: collapse;
     margin-top: 50px;
 }
-th {
+.TableHeader {
     border-color: greenyellow;
     border-style: solid;
     width: 40px;
     height: 40px;
+    font-size: 20px;
     text-align: center;
 }
 td {
@@ -24,13 +25,13 @@ td {
     border: none;
     padding: 5px;
     margin: 0px;
-    width: 65px;
-    height: 45px;
+    width: 80px;
+    height: 65px;
 }
 .NumberInTable {
     width: 40px;
     height: 40px;
-    padding: 10px;
+    font-size: 20px;
     text-align: center;
 }
 #SmallShipButton:active {
