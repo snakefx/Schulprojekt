@@ -29,13 +29,16 @@ function NotMarked(place) { // hier wird getestet ob ein feld belegt ist false =
   return marked;
 }
 function ShotIndicator(place){
+  console.log(2+place)
   document.getElementById("2"+place).style.backgroundColor = "yellow";
+  
 }
-function RemoveShotIndicator(){
+function RemoveShotIndicator(place){
   document.getElementById("2"+place).style.backgroundColor = "black";
 }
-function shoot(){//here comes the code for the shooting
-  document.getElementById("2"+place).style.backgroundColor = "red";
+
+function shoot(place){//Hier kann der code für das "schießen" geschrieben werden (muss nicht KANN) ,
+   //wird durch drücken auf feld der unteren tabelle aktiviert und place gibt die position des aktivierten feldes z.B 4D
 }
 function RemovePlacementIndicator(place) { // hier wird die markierung zurückgesetzt sobald der mausziger das feld verlässt (funktioniert noch nicht perfekt)
   if (Buttonpressed === 1){

@@ -38,8 +38,8 @@ function CreateContent(Size, Number, player) {
             content = `<button onmouseout="RemovePlacementIndicator('${pos}')" onmouseover="PlacementIndicator('${pos}')"\
         onclick="TableClick('${pos}')" id="${pos}" class="shipbutton"> </button>`
         } else {// this is the html code for the lower playing field (enemie field/ 2 player )(exlcluding header which is almost identical to player 1)
-            content = `<buttom onmouseover="ShotIndicator('2${pos}')"\ 
-            onmouseout="RemoveShotIndicator('2${pos}')" onclick="Shoot('2${pos}')" class="shipbutton1"> </button>`
+            content = `<button id="2${pos}" onmouseover="ShotIndicator('${pos}')"\ 
+            onmouseout="RemoveShotIndicator('${pos}')" onclick="Shoot('${pos}')" class='shipbutton'> </button>`
         }// the 2 before ${pos} is to deifferentiate between field 1 and 2
         td.innerHTML = (content);
     }
