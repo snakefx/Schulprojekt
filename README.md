@@ -102,5 +102,21 @@ Um die files im browser anschauen zu können schreibt in terminal     php artian
 
 (die erste seite die ihr sehen werdet ist unwichtig regestriert euch um zum wichtigen teil zu kommen)
 
+CSS: 
+Um CSS files zu nutzen Muss npm run dev in die console eingegeben werden (zumindest bei mac)
+
+um ein css file zu verlinken dieses in ressources/css packen und als @vite('resources/css/"your filename".css') -ohne ""- in dem zugehörigen html file verlinken.
+ siehe @vite('resources/css/Table.css') in shipsink/show
+
+
+
+Anderes:
+
+Bitte nicht in main Branch Coden, erstellt eine eigene branch
+
+Möglicherweise funktionieren einiger der Erklärungen hier nicht oder sind veraltet
+
+
+Bei Fragen gerne an mich wenden Nico
 
 ihr braucht php und composer um laravel zu nutzen (warscheinlich)
