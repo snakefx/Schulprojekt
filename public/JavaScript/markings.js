@@ -29,7 +29,6 @@ function NotMarked(place) { // hier wird getestet ob ein feld belegt ist false =
   return marked;
 }
 function ShotIndicator(place) {
-  console.log(2 + place)
   document.getElementById("2" + place).style.backgroundColor = "yellow";
 
 }
@@ -71,7 +70,7 @@ function RemovePlacementIndicator(place) { // hier wird die markierung zurückge
         }
       }
     }
-    else if (alignment === "v") {
+    else if (alignment === "v" && GridNumber<=11) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "black";
       GridNumber++;
@@ -110,7 +109,7 @@ function RemovePlacementIndicator(place) { // hier wird die markierung zurückge
         }
       }
     }
-    else if (alignment === "v") {
+    else if (alignment === "v" &&GridNumber<=10) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "black";
       GridNumber++;
@@ -157,7 +156,7 @@ function RemovePlacementIndicator(place) { // hier wird die markierung zurückge
         }
       }
     }
-    else if (alignment === "v") {
+    else if (alignment === "v" && GridNumber<=09) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "black";
       GridNumber++;
@@ -208,7 +207,7 @@ function PlacementIndicator(place)// Hier wird angezeigt wo das schiff sein wür
       }
 
     }
-    else if (alignment === "v") {
+    else if (alignment === "v" && GridNumber <=11) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "#009900";
       GridNumber++;
@@ -247,7 +246,7 @@ function PlacementIndicator(place)// Hier wird angezeigt wo das schiff sein wür
         }
       }
     }
-    else if (alignment === "v") {
+    else if (alignment === "v"&&GridNumber<=10) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "#009900";
       GridNumber++;
@@ -294,7 +293,7 @@ function PlacementIndicator(place)// Hier wird angezeigt wo das schiff sein wür
         }
       }
     }
-    else if (alignment === "v") {
+    else if (alignment === "v" && GridNumber<=9) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "#009900";
       GridNumber++;

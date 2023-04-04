@@ -4,7 +4,6 @@ var counter2;
 var table;
 function CreateTableHeader(Size, player) {
     for (counter1 = 0; counter1 < Size; counter1++) {
-        console.log("header" + Size);
         if (counter1 === 0) {
 
             table = document.getElementById(`table${player}`);
@@ -25,7 +24,6 @@ function CreateTableHeader(Size, player) {
 }
 function CreateContent(Size, Number, player) {
     let content
-    console.log("content" + Size + "number=" + Number);
     table = document.getElementById(`table${player}`);
     var tr = table.insertRow(0);
     var td = tr.insertCell(0);
