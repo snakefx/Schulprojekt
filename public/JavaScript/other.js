@@ -148,8 +148,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         document.getElementById(place).style.backgroundColor = "#006600";
         Buttonpressed = 0;
         break;
-      }else if (counter2 === 3)
-      {
+      } else if (counter2 === 3) {
         alert("error");
       }
 
