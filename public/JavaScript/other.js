@@ -78,7 +78,7 @@ function SelectedButton() { // hier wird ein button auf weiß zurückgesetzt wen
       document.getElementById("MediumShipButton").style.backgroundColor = "white";
       break;
     case 4:
-      document.getEdlementById("BigShipButton").style.backgroundColor = "white";
+      document.getElementById("BigShipButton").style.backgroundColor = "white";
       break;
   }
 }
@@ -210,10 +210,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         GridChar = place.slice(1, 2);
       }
 
-      if (place + 1 > 12) {// to prevent placing ships outside of field
-
-      }
-      else {
+      if (GridNumber <= 11) {// to prevent placing ships outside of field
 
 
         GridNumber++;
@@ -307,9 +304,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         GridNumber = place.slice(0, 1);
         GridChar = place.slice(1, 2);
       }
-      if (place + 2 > 12) {// to prevent placing ships outside of field
-      }
-      else {
+      if (GridNumber <=10) {// to prevent placing ships outside of field
         GridNumber++;
         secondplace = GridNumber + GridChar;
         GridNumber++;
@@ -405,9 +400,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         GridNumber = place.slice(0, 1);
         GridChar = place.slice(1, 2);
       }
-      if (place + 3 > 12) {// to prevent placing ships outside of field
-      }
-      else {
+      if (GridNumber<=9) {// to prevent placing ships outside of field
         GridNumber++;
         secondplace = GridNumber + GridChar;
         GridNumber++;
