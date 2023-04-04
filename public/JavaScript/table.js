@@ -45,7 +45,7 @@ function CreateContent(Size, Number, player) {
     }
 }
 function CreateTable(Size) {
-    for (y =1; y <= 2; y++) {
+    for (y = 1; y <= 2; y++) {
         for (x = Size; x > 0; x--) {
             CreateContent(Size + 1, x, y);
         }
