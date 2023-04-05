@@ -1,10 +1,6 @@
-const AllChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"];
-var counter1;
-var counter2;
-var table;
 function CreateTableHeader(Size, player) {
-    for (counter1 = 0; counter1 < Size; counter1++) {
-        if (counter1 === 0) {
+    for (counter = 0; counter < Size; counter++) {
+        if (counter === 0) {
 
             table = document.getElementById(`table${player}`);
             var th = table.createTHead();
@@ -37,13 +33,17 @@ function CreateContent(Size, Number, player) {
         onclick="TableClick('${pos}')" id="${pos}" class="shipbutton"> </button>`
         } else {// this is the html code for the lower playing field (enemie field/ 2 player )(exlcluding header which is almost identical to player 1)
             content = `<button id="2${pos}" onmouseover="ShotIndicator('${pos}')"\ 
-            onmouseout="RemoveShotIndicator('${pos}')" onclick="Shoot('${pos}')" class='shipbutton'> </button>`
+            onmouseout="RemoveShotIndicator('${pos}')" onclick="ShootAtEnemie('${pos}')" class='shipbutton'> </button>`
         }// the 2 before ${pos} is to deifferentiate between field 1 and 2
         td.innerHTML = (content);
     }
 }
 function CreateTable(Size) {
-    for (y = 1; y <= 2; y++) {
+    let z = 2;
+    if(document.getElementById(`table2`) === null){
+        z = 1;
+    }
+    for (y = 1; y <= z; y++) {
         for (x = Size; x > 0; x--) {
             CreateContent(Size + 1, x, y);
         }

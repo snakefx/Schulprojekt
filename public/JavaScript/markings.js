@@ -33,7 +33,11 @@ function ShotIndicator(place) {
 
 }
 function RemoveShotIndicator(place) {
+  let stil = document.getElementById(`2${place}`).style.backgroundColor;
+  if (stil != "#ff0000" || stil != "rgb(204, 102, 0)"){
   document.getElementById("2" + place).style.backgroundColor = "black";
+  console.log(stil);
+  }
 }
 
 function shoot(place) {//Hier kann der code für das "schießen" geschrieben werden (muss nicht KANN) ,
@@ -174,8 +178,8 @@ function RemovePlacementIndicator(place) { // hier wird die markierung zurückge
     }
   }
 }
-function PlacementIndicator(place)// Hier wird angezeigt wo das schiff sein würde wenn man das feld anklickt über das die maus gerdee ist
-{
+function PlacementIndicator(place){   // Hier wird angezeigt wo das schiff sein würde wenn man das feld anklickt über das die maus gerdee ist
+
   if (Buttonpressed === 1) {
     if (NotMarked(place))
       document.getElementById(place).style.backgroundColor = "#009900";

@@ -321,7 +321,7 @@
                         <a href="">Hover over me!</a>
                     </div>
                     <ul class="submenu">
-                        <li><a href="/ship/show">Klick here to get to the important site</a></li>
+                        <li><a href="/ship/create">Klick here to get to the important site</a></li>
                         <li><a href="">This does nothin</a></li>
                         <li><a href="">This does nothin</a></li>
                         <li><a href="">This does nothin</a></li>
