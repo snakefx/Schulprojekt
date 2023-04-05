@@ -1,5 +1,5 @@
 <x-app-layout>
-    <!-- um lokalen server zu starten sodass man mit localhost die seite sieht schreibt "php artisan serve" in das terminal(ohne semicolons)-->
+    <!-- um lokalen server zu starten sodass man die seite sieht schreibt "php artisan serve" in das terminal(ohne semicolons)-->
     @vite('resources/css/Table.css')
 
     <div class="ShipBox">
@@ -14,6 +14,7 @@
             <input type="radio" name="horizontal" id="h" onclick="ChangeAlignment('h')" />
             <label for="vertical">Vertical</label>
             <input type="radio" name="vertical" id="v" onclick="ChangeAlignment('v')" />
+            <button onclick="AutoPlacement()">Auto Placement</button>
             <table id="table1">
             </table>
         </div>
@@ -22,7 +23,8 @@
             </table>
         </div>
     </div>
-    <script src="/JavaScript/table.js"></script>
     <script src="/JavaScript/other.js"></script>
+    <script src="/JavaScript/auto.js"></script>
+    <script src="/JavaScript/table.js"></script>
     <script src="/Javascript/markings.js"></script>
 </x-app-layout>

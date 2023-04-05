@@ -29,12 +29,14 @@ var counter;// für die for schleifen
 var counter2;
 var GridNumber; // hier wird die Nummer des ausgewählten ortes zwischengespeichert
 var GridChar; // hier wird der Buchstabe des gewählten ortes zwischengespeichert
+var place;
 var secondplace; // hier werden die belegten felder zwischengespeichert
 var thirdplace;
 var fourthplace;
 var HitCounter; // hier werden die treffer gespeichert
 var ShipfieldsNumber = 16; // hier wird die anzahl der (gegenerischen) felder gespeichert die noch getroffen werden müssen
 var CurrentPlayer = 1; // hier wird der active spieler gespeichert
+var RandomGenerated = false; // sagt ob der Randomplacemnt durchläuft
 ChangeAlignment("h"); // der anfangs aktive radiobutton wird festgelegt
 function PlayerChange() { // hier wird der spieler geändert
   if (1 === CurrentPlayer) {
@@ -145,11 +147,16 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         TinyShips.Assigned[counter2] = "y"
 
         document.getElementById("TinyShipButton").style.backgroundColor = "white";
-        document.getElementById(place).style.backgroundColor = "#006600";
+        document.getElementById(place).style.backgroundColor = "#339933";
         Buttonpressed = 0;
         break;
       } else if (counter2 === 3) {
-        alert("error");
+        if (RandomGenerated === true) {
+          return "error";
+        }
+        else {
+          alert("error")
+        }
       }
 
     }
@@ -194,7 +201,12 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
 
             }
             else if (counter2 === 2) {
-              alert("error")
+              if (RandomGenerated === true) {
+                return "error";
+              }
+              else {
+                alert("error")
+              }
             }
           }
         }
@@ -239,7 +251,14 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
 
           }
           else if (counter2 === 2) {
-            alert("error")
+            if (RandomGenerated === true) {
+              return "error";
+            }
+            else {
+              alert("error")
+            }
+
+
           }
         }
       }
@@ -283,16 +302,21 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
 
 
               // Mark fields and return button to default state
-              document.getElementById(thirdplace).style.backgroundColor = "#006600";
-              document.getElementById(secondplace).style.backgroundColor = "#006600";
+              document.getElementById(thirdplace).style.backgroundColor = "#003300";
+              document.getElementById(secondplace).style.backgroundColor = "#003300";
               document.getElementById("MediumShipButton").style.backgroundColor = "white";
-              document.getElementById(place).style.backgroundColor = "#006600";
+              document.getElementById(place).style.backgroundColor = "#003300";
               Buttonpressed = 0;
               break;
 
             }
             else if (counter2 === 1) {
-              alert("error")
+              if (RandomGenerated === true) {
+                return "error";
+              }
+              else {
+                alert("error")
+              }
             }
           }
         }
@@ -328,16 +352,21 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
 
 
             // Mark fields and return button to default state
-            document.getElementById(thirdplace).style.backgroundColor = "#006600";
-            document.getElementById(secondplace).style.backgroundColor = "#006600";
+            document.getElementById(thirdplace).style.backgroundColor = "#336600";
+            document.getElementById(secondplace).style.backgroundColor = "#336600";
             document.getElementById("MediumShipButton").style.backgroundColor = "white";
-            document.getElementById(place).style.backgroundColor = "#006600";
+            document.getElementById(place).style.backgroundColor = "#336600";
             Buttonpressed = 0;
             break;
 
           }
           else if (counter2 === 1) {
-            alert("error")
+            if (RandomGenerated === true) {
+              return "error";
+            }
+            else {
+              alert("error")
+            }
           }
         }
       }
@@ -381,17 +410,22 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
 
             BigShips.Assigned = "y";
             // Mark fields and return button to default state
-            document.getElementById(fourthplace).style.backgroundColor = "#006600";
-            document.getElementById(thirdplace).style.backgroundColor = "#006600";
-            document.getElementById(secondplace).style.backgroundColor = "#006600";
+            document.getElementById(fourthplace).style.backgroundColor = "#333300";
+            document.getElementById(thirdplace).style.backgroundColor = "#333300";
+            document.getElementById(secondplace).style.backgroundColor = "#333300";
             document.getElementById("BigShipButton").style.backgroundColor = "white";
-            document.getElementById(place).style.backgroundColor = "#006600";
+            document.getElementById(place).style.backgroundColor = "#333300";
             Buttonpressed = 0;
             break;
 
           }
           else {
-            alert("error")
+            if (RandomGenerated === true) {
+              return "error";
+            }
+            else {
+              alert("error")
+            }
           }
         }
       }
@@ -434,7 +468,12 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
 
         }
         else {
-          alert("error")
+          if (RandomGenerated === true) {
+            return "error";
+          }
+          else {
+            alert("error")
+          }
         }
       }
     }
