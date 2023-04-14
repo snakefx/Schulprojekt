@@ -14,7 +14,7 @@
             <input type="radio" name="horizontal" id="h" onclick="ChangeAlignment('h')" />
             <label for="vertical">Vertical</label>
             <input type="radio" name="vertical" id="v" onclick="ChangeAlignment('v')" />
-            <button onclick="AutoPlacement()">Auto Placement</button>
+            <button onclick="AutoPlacement()" id="Autoplacement">Auto Placement</button>
             <table id="table1">
             </table>
         </div>
