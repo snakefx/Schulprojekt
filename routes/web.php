@@ -28,8 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('ship/show', [ShipController::class, 'show']);
-Route::get('ship/create', [ShipController::class, 'create']);
+Route::get('Singleplayer/show', [ShipController::class, 'show']);
+Route::get('Singleplayer/create', [ShipController::class, 'create']);
+Route::get('Local/create', [ShipController::class, 'createLocal']);
 
 
 require __DIR__.'/auth.php';

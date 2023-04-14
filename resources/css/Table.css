@@ -64,7 +64,10 @@ label {
     margin-top: 10px;
     margin-bottom: 100px;
 }
-
 #TinyShipButton {
     margin-left: 100px;
+}
+.HeaderInBox{
+    margin-left: 100px;
+    color: rgb(238, 115, 15);
 }

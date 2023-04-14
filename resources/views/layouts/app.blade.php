@@ -318,11 +318,11 @@
             <a>
                 <div class="LeftBox">
                     <div class="Mark">
-                        <a href="">Hover over me!</a>
+                        <a href="">Start Game</a>
                     </div>
                     <ul class="submenu">
-                        <li><a href="/ship/create">Klick here to get to the important site</a></li>
-                        <li><a href="">This does nothin</a></li>
+                        <li><a href="/Singleplayer/create">Singleplayer</a></li>
+                        <li><a href="/Local/create">Local Multiplayer</a></li>
                         <li><a href="">This does nothin</a></li>
                         <li><a href="">This does nothin</a></li>
                         <li><a href="">This does nothin</a></li>

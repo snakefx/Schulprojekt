@@ -1,4 +1,4 @@
-function BeginGame() {
+function BeginGame(mode) {
   counter2 = 0;
   for (counter = 0; counter <= 4; counter++) {
     if (TinyShips.Assigned[counter2] === "n") {
@@ -20,7 +20,13 @@ function BeginGame() {
   }
 
   if (counter2 === 0) {
+    if(mode ==="local")
+    {
+      location.replace("/local/show")
+    }
+    else{
     location.replace("/ship/show");
+    }
   }
   else {
     alert("not all ships assigned");
