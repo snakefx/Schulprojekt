@@ -1,12 +1,14 @@
  // der anfangs aktive radiobutton wird festgelegt
-function PlayerChange() { // hier wird der spieler geändert
+function PlayerChange(place) { // hier wird der spieler geändert
   if (1 === CurrentPlayer) {
     CurrentPlayer = 2;
   }
   else {
     CurrentPlayer = 1;
   }
+  locatzion.replace(place);
 }
+
 function BotMove() { // hier soll der bot hinkommen
 
 }

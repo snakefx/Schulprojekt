@@ -30,12 +30,12 @@ function NotMarked(place) { // hier wird getestet ob ein feld belegt ist false =
 }
 function ShotIndicator(place) {
   if (InClickedArray(place) === false){
-  document.getElementById("2" + place).style.backgroundColor = "yellow";
+  document.getElementById("2E" + place).style.backgroundColor = "yellow";
   }
 }
 function RemoveShotIndicator(place) {
   if (InClickedArray(place) === false){
-    document.getElementById("2"+place).style.backgroundColor = "black";
+    document.getElementById("2E"+place).style.backgroundColor = "black";
   }
 }
 

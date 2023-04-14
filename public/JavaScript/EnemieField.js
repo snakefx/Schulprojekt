@@ -18,20 +18,20 @@ function BeginGame(mode) {
   if (SmallShips.Assigned === "n") {
     counter2++;
   }
-
   if (counter2 === 0) {
     if(mode ==="local")
     {
       location.replace("/local/show")
     }
     else{
-    location.replace("/ship/show");
+    location.replace("/Singleplayer/show");
     }
   }
   else {
     alert("not all ships assigned");
   }
 }
+
 function InClickedArray(place) {
   let free = false;
   for (counter = 0; counter < clicked.length; counter++) {
@@ -40,6 +40,7 @@ function InClickedArray(place) {
   }
   return free;
 }
+
 function ShootAtEnemie(place) {
   let marked = true;
   let specialcounter;//copied from notmarked
@@ -73,11 +74,11 @@ function ShootAtEnemie(place) {
       }
     }
     if (marked = true) {
-      document.getElementById(`2${place}`).style.backgroundColor = "#cc6600";
+      document.getElementById(`2E${place}`).style.backgroundColor = "#cc6600";
       clicked.push(place)
     }
     else {
-      document.getElementById(`2${place}`).style.backgroundColor = "orange";// save all marked places and go through them in remove shotindicator
+      document.getElementById(`2E${place}`).style.backgroundColor = "orange";// save all marked places and go through them in remove shotindicator
       clicked.push(place);
     }
   }

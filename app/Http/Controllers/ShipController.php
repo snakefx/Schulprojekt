@@ -18,6 +18,10 @@ class ShipController extends Controller
     {
         return view("shipsink/createLocal");
     }
+    public function createLocal2()
+    {
+        return view("shipsink/createLocal2");
+    }
     
 
 }

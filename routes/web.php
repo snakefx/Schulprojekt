@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
 Route::get('Singleplayer/show', [ShipController::class, 'show']);
 Route::get('Singleplayer/create', [ShipController::class, 'create']);
 Route::get('Local/create', [ShipController::class, 'createLocal']);
+Route::get('Local/create2', [ShipController::class, 'createLocal2']);
 
 
 require __DIR__.'/auth.php';

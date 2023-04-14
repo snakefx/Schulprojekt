@@ -18,7 +18,41 @@ function CreateTableHeader(Size, player) {
         }
     }
 }
-function CreateContent(Size, Number, player) {
+function CreateContent(Size, Number, tablenumber) {
+    let content
+    table = document.getElementById(`table${tablenumber}`);
+    var tr = table.insertRow(0);
+    var td = tr.insertCell(0);
+    td.setAttribute("class", "NumberInTable");
+    td.innerHTML = (Number);
+    for (counter2 = 1; counter2 < Size; counter2++) {
+        let pos = Number + AllChars[counter2 - 1];
+        var td = tr.insertCell(counter2);
+        if (tablenumber === 1 && CurrentPlayer === 1) {
+            content = `<button onmouseout="RemovePlacementIndicator('${pos}')" onmouseover="PlacementIndicator('${pos}')"\
+        onclick="TableClick('${pos}')" id="${pos}" class="shipbutton"> </button>`
+        } else{ // this is the html code for the lower playing field (enemie field/ 2 player )(exlcluding header which is almost identical to player 1)
+            content = `<button id="2E${pos}" onmouseover="ShotIndicator('${pos}')"\ 
+            onmouseout="RemoveShotIndicator('${pos}')" onclick="ShootAtEnemie('${pos}')" class='shipbutton'> </button>`
+        }// the 2 before ${pos} is to deifferentiate between field 1 and 2
+        td.innerHTML = (content);
+    }
+}
+function CreateTable(Size) {
+    let z = 2;
+    if(document.getElementById(`table2`) === null){
+        z = 1;
+        Show Positions
+    }
+    for (y = 1; y <= z; y++) {
+        for (x = Size; x > 0; x--) {
+            CreateContent(Size + 1, x, y,);
+        }
+        CreateTableHeader(Size, y);
+    }
+}
+CreateTable(12);
+function CreateContentMain(Size, Number, player) {
     let content
     table = document.getElementById(`table${player}`);
     var tr = table.insertRow(0);
@@ -30,25 +64,11 @@ function CreateContent(Size, Number, player) {
         var td = tr.insertCell(counter2);
         if (player === 1) {//this is the html code for the upper playing field(friendly field/1 player) (excluding header)
             content = `<button onmouseout="RemovePlacementIndicator('${pos}')" onmouseover="PlacementIndicator('${pos}')"\
-        onclick="TableClick('${pos}')" id="${pos}" class="shipbutton"> </button>`
+        onclick="TableClick('${pos},${player}')" id="${pos}" class="shipbutton"> </button>`
         } else {// this is the html code for the lower playing field (enemie field/ 2 player )(exlcluding header which is almost identical to player 1)
-            content = `<button id="2${pos}" onmouseover="ShotIndicator('${pos}')"\ 
+            content = `<button id="2E${pos}" onmouseover="ShotIndicator('${pos}')"\ 
             onmouseout="RemoveShotIndicator('${pos}')" onclick="ShootAtEnemie('${pos}')" class='shipbutton'> </button>`
         }// the 2 before ${pos} is to deifferentiate between field 1 and 2
         td.innerHTML = (content);
     }
 }
-function CreateTable(Size) {
-    let z = 2;
-    if(document.getElementById(`table2`) === null){
-        z = 1;
-    }
-    for (y = 1; y <= z; y++) {
-        for (x = Size; x > 0; x--) {
-            CreateContent(Size + 1, x, y);
-        }
-
-        CreateTableHeader(Size, y);
-    }
-}
-CreateTable(12);
