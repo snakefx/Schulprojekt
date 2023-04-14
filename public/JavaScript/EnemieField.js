@@ -26,39 +26,53 @@ function BeginGame() {
     alert("not all ships assigned");
   }
 }
+function InClickedArray(place) {
+  let free = false;
+  for (counter = 0; counter < clicked.length; counter++) {
+    if (clicked[counter] === place)
+      free = true;
+  }
+  return free;
+}
 function ShootAtEnemie(place) {
   let marked = true;
   let specialcounter;//copied from notmarked
   let specialcounter2;
-  for (specialcounter = 1; specialcounter < 5; specialcounter++) {
-    if (TinyShipsE[`shipH${specialcounter}`] === place) {
-      TinyShipsE[`shipH${specialcounter}`] = true;
-    }
-  }
-  for (specialcounter = 1; specialcounter < 4; specialcounter++) {
-    for (specialcounter2 = 0; specialcounter2 < SmallShipsE[`ship${specialcounter}H`].length; specialcounter2++) {
-      if (SmallShipsE[`ship${specialcounter}H`][specialcounter2] === place) {
-        SmallShipsE[`ship${specialcounter}H`][specialcounter2] = true;
-      }
-    }
-  }
-  for (specialcounter = 1; specialcounter < 3; specialcounter++) {
-    for (specialcounter2 = 0; specialcounter2 < MediumShipsE[`ship${specialcounter}H`].length; specialcounter2++) {
-      if (MediumShipsE[`ship${specialcounter}H`][specialcounter2] === place) {
-        MediumShipsE[`ship${specialcounter}H`][specialcounter2] = true;
-      }
-    }
-  }
-  for (specialcounter2 = 0; specialcounter2 < BigShipsE[`ship1H`].length; specialcounter2++) {
-    if (BigShipsE[`ship1H`][specialcounter2] === place) {
-      BigShipsE[`ship1H`][specialcounter2] = true;
-    }
-  }
-  if (marked = true) {
-    document.getElementById(`2${place}`).style.backgroundColor = "#cc6600"
+  if (InClickedArray(place) === true) {
+    alert("error");
   }
   else {
-    document.getElementById(`2${place}`).style.backgroundColor = "orange"// save all marked places and go through them in remove shotindicator
-    clicked.push(place);
+    for (specialcounter = 1; specialcounter < 5; specialcounter++) {
+      if (TinyShipsE[`shipH${specialcounter}`] === place) {
+        TinyShipsE[`shipH${specialcounter}`] = true;
+      }
+    }
+    for (specialcounter = 1; specialcounter < 4; specialcounter++) {
+      for (specialcounter2 = 0; specialcounter2 < SmallShipsE[`ship${specialcounter}H`].length; specialcounter2++) {
+        if (SmallShipsE[`ship${specialcounter}H`][specialcounter2] === place) {
+          SmallShipsE[`ship${specialcounter}H`][specialcounter2] = true;
+        }
+      }
+    }
+    for (specialcounter = 1; specialcounter < 3; specialcounter++) {
+      for (specialcounter2 = 0; specialcounter2 < MediumShipsE[`ship${specialcounter}H`].length; specialcounter2++) {
+        if (MediumShipsE[`ship${specialcounter}H`][specialcounter2] === place) {
+          MediumShipsE[`ship${specialcounter}H`][specialcounter2] = true;
+        }
+      }
+    }
+    for (specialcounter2 = 0; specialcounter2 < BigShipsE[`ship1H`].length; specialcounter2++) {
+      if (BigShipsE[`ship1H`][specialcounter2] === place) {
+        BigShipsE[`ship1H`][specialcounter2] = true;
+      }
+    }
+    if (marked = true) {
+      document.getElementById(`2${place}`).style.backgroundColor = "#cc6600";
+      clicked.push(place)
+    }
+    else {
+      document.getElementById(`2${place}`).style.backgroundColor = "orange";// save all marked places and go through them in remove shotindicator
+      clicked.push(place);
+    }
   }
 }

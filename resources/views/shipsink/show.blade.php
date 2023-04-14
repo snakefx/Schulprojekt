@@ -14,9 +14,9 @@
             <table id="table2">
             </table>
         </div>
-    </div>
+    </div> 
+    <script src="/JavaScript/Variables_etc.js"></script>   
     <script src="/JavaScript/EnemieField.js"></script>
-    <script src="/JavaScript/Variables_etc.js"></script>
     <script src="/JavaScript/other.js"></script>
     <script src="/JavaScript/auto.js"></script>
     <script src="/JavaScript/table.js"></script>
