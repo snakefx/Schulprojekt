@@ -2,34 +2,22 @@ function AutoPlacement() {
     RandomGenerated = true;
     var x;
     var answer;
-    for (x = 1; x <= 4; x++) {
-        Buttonpressed = 1;
+
+    for (x = 1; x <= 1; x++) {
+        Buttonpressed = 4;
         RandomizeAlignment();
-        place = RandomizePlace(12);
+        place = RandomizePlace(09);
         answer = TableClick(place);
         while (answer === "error") {
             RandomizeAlignment();
-            place = RandomizePlace(12);
+            place = RandomizePlace(09);
             answer = "";
             answer = TableClick(place);
-            console.log("place1");
         }
         Buttonpressed = 0;
     }
-    for (x = 1; x <= 3; x++) {
-        Buttonpressed = 2;
-        RandomizeAlignment();
-        place = RandomizePlace(11);
-        answer = TableClick(place);
-        while (answer === "error") {
-            RandomizeAlignment();
-            place = RandomizePlace(11);
-            answer = "";
-            answer = TableClick(place);
-            console.log("place2");
-        }
-        Buttonpressed = 0;
-    }
+
+
     for (x = 1; x <= 2; x++) {
         Buttonpressed = 3;
         RandomizeAlignment();
@@ -40,25 +28,38 @@ function AutoPlacement() {
             place = RandomizePlace(10);
             answer = "";
             answer = TableClick(place);
-            console.log("place3");
+        }
+        Buttonpressed = 0;
+    } for (x = 1; x <= 3; x++) {
+        Buttonpressed = 2;
+        RandomizeAlignment();
+        place = RandomizePlace(11);
+        answer = TableClick(place);
+        while (answer === "error") {
+            RandomizeAlignment();
+            place = RandomizePlace(11);
+            answer = "";
+            answer = TableClick(place);
+
         }
         Buttonpressed = 0;
     }
-    Buttonpressed = 4;
-    RandomizeAlignment();
-    place = RandomizePlace(09);
-    answer = TableClick(place);
-    while (answer === "error") {
+    for (x = 1; x <= 4; x++) {
+        Buttonpressed = 1;
         RandomizeAlignment();
-        place = RandomizePlace(09);
-        answer = "";
+        place = RandomizePlace(12);
         answer = TableClick(place);
-        console.log("place4");
+        while (answer === "error") {
+            RandomizeAlignment();
+            place = RandomizePlace(12);
+            answer = "";
+            answer = TableClick(place);
+        }
+        Buttonpressed = 0;
     }
-    Buttonpressed = 0;
 
     RandomGenerated = false;
-    document.getElementById('Autoplacement').style.visibility = "hidden";
+
 }
 function RandomizePlace(size) {
     GridNumber = Math.floor(Math.random() * size) + 1;

@@ -72,6 +72,7 @@ let bigShipsA = {
 };
 
 
+
 let difficulty = 3; //1 = Easy 2 = Medium 3 = Hard
 
 
@@ -186,29 +187,29 @@ function translateAtoS(shot){
     let shot0 = shot[0]
     switch (shot0){
         case 0:
-            return 'A'+shot1
+            return shot1+'A'
         case 1:
-            return 'B'+shot1
+            return shot1+'B'
         case 2:
-            return 'C'+shot1
+            return shot1+'C'
         case 3:
-            return 'D'+shot1
+            return shot1+'D'
         case 4:
-            return 'E'+shot1
+            return shot1+'E'
         case 5:
-            return 'F'+shot1
+            return shot1+'F'
         case 6:
-            return 'G'+shot1
+            return shot1+'G'
         case 7:
-            return 'H'+shot1
+            return shot1+'H'
         case 8:
-            return 'I'+shot1
+            return shot1+'I'
         case 9:
-            return 'J'+shot1
+            return shot1+'J'
         case 10:
-            return 'K'+shot1
+            return shot1+'K'
         case 11:
-            return 'L'+shot1
+            return shot1+'L'
     }
 }
 
@@ -217,29 +218,29 @@ function translateStoA(shot){
     let shot0 = shot.replace(/[\d]/g, "")
     switch (shot0){
         case 'A':
-            return [0,shot1]
+            return [shot1,0]
         case 'B':
-            return [1,shot1]
+            return [shot1,1]
         case 'C':
-            return [2,shot1]
+            return [shot1,2]
         case 'D':
-            return [3,shot1]
+            return [shot1,3]
         case 'E':
-            return [4,shot1]
+            return [shot1,4]
         case 'F':
-            return [5,shot1]
+            return [shot1,5]
         case 'G':
-            return [6,shot1]
+            return [shot1,6]
         case 'H':
-            return [7,shot1]
+            return [shot1,7]
         case 'I':
-            return [8,shot1]
+            return [shot1,8]
         case 'J':
-            return [9,shot1]
+            return [shot1,9]
         case 'K':
-            return [10,shot1]
+            return [shot1,10]
         case 'L':
-            return [11,shot1]
+            return [shot1,11]
     }
 }
 

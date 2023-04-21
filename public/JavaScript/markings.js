@@ -29,17 +29,20 @@ function NotMarked(place) { // hier wird getestet ob ein feld belegt ist false =
   return marked;
 }
 function ShotIndicator(place) {
+  if (InClickedArray(place) === false){
   document.getElementById("2" + place).style.backgroundColor = "yellow";
-
+  }
 }
 function RemoveShotIndicator(place) {
-  document.getElementById("2" + place).style.backgroundColor = "black";
+  if (InClickedArray(place) === false){
+    document.getElementById("2"+place).style.backgroundColor = "black";
+  }
 }
 
 function shoot(place) {//Hier kann der code für das "schießen" geschrieben werden (muss nicht KANN) ,
   //wird durch drücken auf feld der unteren tabelle aktiviert und place gibt die position des aktivierten feldes z.B 4D
 }
-function RemovePlacementIndicator(place) { // hier wird die markierung zurückgesetzt sobald der mausziger das feld verlässt (funktioniert noch nicht perfekt)
+function RemovePlacementIndicator(place) {
   if (Buttonpressed === 1) {
     if (NotMarked(place))
       document.getElementById(place).style.backgroundColor = "black";
@@ -70,7 +73,7 @@ function RemovePlacementIndicator(place) { // hier wird die markierung zurückge
         }
       }
     }
-    else if (alignment === "v" && GridNumber<=11) {
+    else if (alignment === "v" && GridNumber <= 11) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "black";
       GridNumber++;
@@ -109,7 +112,7 @@ function RemovePlacementIndicator(place) { // hier wird die markierung zurückge
         }
       }
     }
-    else if (alignment === "v" &&GridNumber<=10) {
+    else if (alignment === "v" && GridNumber <= 10) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "black";
       GridNumber++;
@@ -156,7 +159,7 @@ function RemovePlacementIndicator(place) { // hier wird die markierung zurückge
         }
       }
     }
-    else if (alignment === "v" && GridNumber<=09) {
+    else if (alignment === "v" && GridNumber <= 09) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "black";
       GridNumber++;
@@ -174,8 +177,8 @@ function RemovePlacementIndicator(place) { // hier wird die markierung zurückge
     }
   }
 }
-function PlacementIndicator(place)// Hier wird angezeigt wo das schiff sein würde wenn man das feld anklickt über das die maus gerdee ist
-{
+function PlacementIndicator(place) {   // Hier wird angezeigt wo das schiff sein würde wenn man das feld anklickt über das die maus gerdee ist
+
   if (Buttonpressed === 1) {
     if (NotMarked(place))
       document.getElementById(place).style.backgroundColor = "#009900";
@@ -207,7 +210,7 @@ function PlacementIndicator(place)// Hier wird angezeigt wo das schiff sein wür
       }
 
     }
-    else if (alignment === "v" && GridNumber <=11) {
+    else if (alignment === "v" && GridNumber <= 11) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "#009900";
       GridNumber++;
@@ -246,7 +249,7 @@ function PlacementIndicator(place)// Hier wird angezeigt wo das schiff sein wür
         }
       }
     }
-    else if (alignment === "v"&&GridNumber<=10) {
+    else if (alignment === "v" && GridNumber <= 10) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "#009900";
       GridNumber++;
@@ -293,7 +296,7 @@ function PlacementIndicator(place)// Hier wird angezeigt wo das schiff sein wür
         }
       }
     }
-    else if (alignment === "v" && GridNumber<=9) {
+    else if (alignment === "v" && GridNumber <= 9) {
       if (NotMarked(place))
         document.getElementById(place).style.backgroundColor = "#009900";
       GridNumber++;

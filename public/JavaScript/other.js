@@ -1,43 +1,4 @@
-var TinyShips = {
-  ship1: "0",
-  ship2: "0",
-  ship3: "0",
-  ship4: "0",
-  Assigned: ["n", "n", "n", "n"]
-}
-
-var SmallShips = { // hier wird die shiffsposition gespeichert jedes shiff ist ein objekt (also ship1,ship2,ship3) die anzahl der objekt (also schiffe) hängt von der anzahl der platzierbaren schiffe ab.
-  ship1: ["0", "0"],// Jedes Objekt ist ein array die länge der arrays hängt von der größe des schiffs ab
-  ship2: ["0", "0"],
-  ship3: ["0", "0"],
-  Assigned: ["n", "n", "n"] // hier wird gespeichert welche schiffe schon eine position zugewiesen bekommen haben die länge dieses arrays hängt von der anzahl der anderen objekte (schiffe) ab n= unbelegt y =belegt
-};
-
-
-var MediumShips = { // selbe wie bei SmallShips nur weniger Objekte(weniger schiffe) und dafür längeres array(größere schiffe)
-  ship1: ["0", "0", "0"],
-  ship2: ["0", "0", "0"],
-  Assigned: ["n", "n"]
-};
-const BigShips = {
-  ship1: ["0", "0", "0", "0"],
-  Assigned: "n"
-};
-var alignment = "v";// h horizontal // v vertical
-var Buttonpressed = 0; //1=kleines Schiff 2=Mittleres Schiff 3=großes Schiff
-var counter;// für die for schleifen
-var counter2;
-var GridNumber; // hier wird die Nummer des ausgewählten ortes zwischengespeichert
-var GridChar; // hier wird der Buchstabe des gewählten ortes zwischengespeichert
-var place;
-var secondplace; // hier werden die belegten felder zwischengespeichert
-var thirdplace;
-var fourthplace;
-var HitCounter; // hier werden die treffer gespeichert
-var ShipfieldsNumber = 16; // hier wird die anzahl der (gegenerischen) felder gespeichert die noch getroffen werden müssen
-var CurrentPlayer = 1; // hier wird der active spieler gespeichert
-var RandomGenerated = false; // sagt ob der Randomplacemnt durchläuft
-ChangeAlignment("h"); // der anfangs aktive radiobutton wird festgelegt
+ // der anfangs aktive radiobutton wird festgelegt
 function PlayerChange() { // hier wird der spieler geändert
   if (1 === CurrentPlayer) {
     CurrentPlayer = 2;
@@ -135,7 +96,8 @@ function PlaceBigShip() {
   }
 }
 
-function TableClick(place) { // wenn man ein feld auswählt wird hier die gewählzt e position gespeichert und markiert
+
+function TableClick(place) { // wenn man ein feld auswählt wird hier die gewählte position gespeichert und markiert
   if (Buttonpressed === 1) {
     for (counter2 = 0; counter2 <= 3; counter2++)
     // look if a ship is unassigned if yes assign it if not give error
@@ -155,7 +117,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
           return "error";
         }
         else {
-          alert("error")
+          alert("error");
         }
       }
 
@@ -205,7 +167,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
                 return "error";
               }
               else {
-                alert("error")
+                alert("error");
               }
             }
           }
@@ -252,7 +214,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
               return "error";
             }
             else {
-              alert("error")
+              alert("error");
             }
 
 
@@ -312,7 +274,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
                 return "error";
               }
               else {
-                alert("error")
+                alert("error");
               }
             }
           }
@@ -328,7 +290,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         GridNumber = place.slice(0, 1);
         GridChar = place.slice(1, 2);
       }
-      if (GridNumber <=10) {// to prevent placing ships outside of field
+      if (GridNumber <= 10) {// to prevent placing ships outside of field
         GridNumber++;
         secondplace = GridNumber + GridChar;
         GridNumber++;
@@ -360,7 +322,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
               return "error";
             }
             else {
-              alert("error")
+              alert("error");
             }
           }
         }
@@ -393,8 +355,6 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
           GridChar = AllChars[counter];
           fourthplace = GridNumber + GridChar;
 
-
-
           if (BigShips.Assigned === "n" && NotMarked(place) && NotMarked(secondplace)
             && NotMarked(thirdplace) && NotMarked(fourthplace)) {
             //Because arrays begin with 0 but my objects not
@@ -419,7 +379,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
               return "error";
             }
             else {
-              alert("error")
+              alert("error");
             }
           }
         }
@@ -434,7 +394,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         GridNumber = place.slice(0, 1);
         GridChar = place.slice(1, 2);
       }
-      if (GridNumber<=9) {// to prevent placing ships outside of field
+      if (GridNumber <= 9) {// to prevent placing ships outside of field
         GridNumber++;
         secondplace = GridNumber + GridChar;
         GridNumber++;
@@ -465,7 +425,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
             return "error";
           }
           else {
-            alert("error")
+            alert("error");
           }
         }
       }
@@ -474,5 +434,6 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
 
   }
 }
+
 
 
