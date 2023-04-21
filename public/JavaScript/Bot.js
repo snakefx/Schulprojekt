@@ -1,4 +1,4 @@
- /*TODO:
+/*TODO:
 Difficulty Button
 Bot Anschprechen
 Antwort von Bot darstellen
@@ -72,7 +72,8 @@ let bigShipsA = {
 };
 
 
-let difficulty = 3; //1 = Easy 2 = Medium 3 = Schummelbot
+
+let difficulty = 3; //1 = Easy 2 = Medium 3 = Hard
 
 
 
