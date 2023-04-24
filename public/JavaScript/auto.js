@@ -2,6 +2,7 @@ function AutoPlacement() {
     RandomGenerated = true;
     var x;
     var answer;
+
     for (x = 1; x <= 1; x++) {
         Buttonpressed = 4;
         RandomizeAlignment();
@@ -39,6 +40,7 @@ function AutoPlacement() {
             place = RandomizePlace(11);
             answer = "";
             answer = TableClick(place);
+
         }
         Buttonpressed = 0;
     }
@@ -57,6 +59,7 @@ function AutoPlacement() {
     }
 
     RandomGenerated = false;
+
 }
 function RandomizePlace(size) {
     GridNumber = Math.floor(Math.random() * size) + 1;
