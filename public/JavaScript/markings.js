@@ -5,6 +5,7 @@ function NotMarked(place) { // hier wird getestet ob ein feld belegt ist false =
   for (specialcounter = 1; specialcounter < 5; specialcounter++) {
     if (TinyShips[`ship${specialcounter}`] === place) {
       marked = false;
+      console.log("test");
     }
   }
   for (specialcounter = 1; specialcounter < 4; specialcounter++) {
@@ -28,14 +29,65 @@ function NotMarked(place) { // hier wird getestet ob ein feld belegt ist false =
   }
   return marked;
 }
+function OneFieldDistance(place) {  //Schut ob feld in 1 feld umkreis belegt true = umliegende felder frei false= min 1 umliegenes feld belegt
+  let IntNumber;
+  if (place.length > 2) { // standard slice also zb. place=B6 in GridChar=B  Gridnumber=6 umwandeln
+    GridNumber = place.slice(0, 2);
+    GridChar = place.slice(2, 3);
+  }
+  else {
+    GridNumber = place.slice(0, 1);
+    GridChar = place.slice(1, 2);
+  }
+  IntNumber = parseInt(GridNumber);
+  if (NotMarked(IntNumber + 1 + GridChar)) { // gibt alle umliegenden felder an notmarked, wenn alles true 
+    if (NotMarked(IntNumber - 1 + GridChar)) {
+      for (counter = 0; AllChars.length > counter; counter++) {
+        if (AllChars[counter] === GridChar) {
+          if (NotMarked(IntNumber + AllChars[counter - 1])) {
+            if (NotMarked(IntNumber + AllChars[counter + 1])) {
+              if (NotMarked(IntNumber + 1 + AllChars[counter + 1])) {
+                if (NotMarked(IntNumber - 1 + AllChars[counter + 1])) {
+                  if (NotMarked(IntNumber + 1 + AllChars[counter - 1])) {
+                    if (NotMarked(IntNumber - 1 + AllChars[counter - 1])) { // wenn jemand einen hübscheren weg kennt dies zu prüfen kann er dies gern umschreiben mir fällt auf die schnelle nix ein
+                      console.log(IntNumber + 1 + GridChar);
+                      return true;
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+        }
+
+
+
+      }
+    }
+  } console.log("false");
+  return false; // sollte nur dies zurückgeben wenn ein "NotMarked" false zurückgibt
+
+}
+function NotMarkedAdvanced(place) {// testet umligende und angeklicktes feld true = alles frei; false= min 1 feld Belegt
+  if (OneFieldDistance(place) && NotMarked(place)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
+
 function ShotIndicator(place) {
-  if (InClickedArray(place) === false){
-  document.getElementById("2" + place).style.backgroundColor = "yellow";
+  if (InClickedArray(place) === false) {
+    document.getElementById("2" + place).style.backgroundColor = "yellow";
   }
 }
 function RemoveShotIndicator(place) {
-  if (InClickedArray(place) === false){
-    document.getElementById("2"+place).style.backgroundColor = "black";
+  if (InClickedArray(place) === false) {
+    document.getElementById("2" + place).style.backgroundColor = "black";
   }
 }
 
