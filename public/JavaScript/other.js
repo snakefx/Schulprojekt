@@ -1,4 +1,4 @@
- // der anfangs aktive radiobutton wird festgelegt
+// der anfangs aktive radiobutton wird festgelegt
 function PlayerChange() { // hier wird der spieler geändert
   if (1 === CurrentPlayer) {
     CurrentPlayer = 2;
@@ -102,7 +102,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
     for (counter2 = 0; counter2 <= 3; counter2++)
     // look if a ship is unassigned if yes assign it if not give error
     {
-      if (TinyShips.Assigned[counter2] === "n" && NotMarked(place)) {
+      if (TinyShips.Assigned[counter2] === "n" && NotMarkedAdvanced(place)) {
         counter2++;
         TinyShips[`ship${counter2}`] = place;
         counter2--
@@ -145,7 +145,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
           for (counter2 = 0; counter2 <= 2; counter2++)
           // look if a ship is unassigned if yes assign it if not give error
           {
-            if (SmallShips.Assigned[counter2] === "n" && NotMarked(place) && NotMarked(secondplace)) {
+            if (SmallShips.Assigned[counter2] === "n" && NotMarkedAdvanced(place) && NotMarkedAdvanced(secondplace)) {
               //Because arrays begin with 0 but my objects not
               counter2++;
               SmallShips[`ship${counter2}`][0] = place;
@@ -192,7 +192,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         for (counter2 = 0; counter2 <= 2; counter2++)
         // look if a ship is unassigned if yes assign it if not give error
         {
-          if (SmallShips.Assigned[counter2] === "n" && NotMarked(place) && NotMarked(secondplace)) {
+          if (SmallShips.Assigned[counter2] === "n" && NotMarkedAdvanced(place) && NotMarkedAdvanced(secondplace)) {
             //Because arrays begin with 0 but my objects not
             counter2++;
             SmallShips[`ship${counter2}`][0] = place;
@@ -248,8 +248,8 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
           for (counter2 = 0; counter2 < 2; counter2++)
           // look if a ship is unassigned if yes assign it if not give error
           {
-            if (MediumShips.Assigned[counter2] === "n" && NotMarked(place) && NotMarked(secondplace)
-              && NotMarked(thirdplace)) {
+            if (MediumShips.Assigned[counter2] === "n" && NotMarkedAdvanced(place) && NotMarkedAdvanced(secondplace)
+              && NotMarkedAdvanced(thirdplace)) {
               //Because arrays begin with 0 but my objects not
               counter2++;
               MediumShips[`ship${counter2}`][0] = place;
@@ -296,8 +296,8 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         GridNumber++;
         thirdplace = GridNumber + GridChar;
         for (counter2 = 0; counter2 <= 2; counter2++) {
-          if (MediumShips.Assigned[counter2] === "n" && NotMarked(place) && NotMarked(secondplace)
-            && NotMarked(thirdplace)) {
+          if (MediumShips.Assigned[counter2] === "n" && NotMarkedAdvanced(place) && NotMarkedAdvanced(secondplace)
+            && NotMarkedAdvanced(thirdplace)) {
             //Because arrays begin with 0 but my objects not
             counter2++;
             MediumShips[`ship${counter2}`][0] = place;
@@ -355,8 +355,8 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
           GridChar = AllChars[counter];
           fourthplace = GridNumber + GridChar;
 
-          if (BigShips.Assigned === "n" && NotMarked(place) && NotMarked(secondplace)
-            && NotMarked(thirdplace) && NotMarked(fourthplace)) {
+          if (BigShips.Assigned === "n" && NotMarkedAdvanced(place) && NotMarkedAdvanced(secondplace)
+            && NotMarkedAdvanced(thirdplace) && NotMarkedAdvanced(fourthplace)) {
             //Because arrays begin with 0 but my objects not
             BigShips[`ship1`][0] = place;
             BigShips[`ship1`][1] = secondplace;
@@ -401,8 +401,8 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
         thirdplace = GridNumber + GridChar;
         GridNumber++;
         fourthplace = GridNumber + GridChar;
-        if (BigShips.Assigned === "n" && NotMarked(place) && NotMarked(secondplace)
-          && NotMarked(thirdplace) && NotMarked(fourthplace)) {
+        if (BigShips.Assigned === "n" && NotMarkedAdvanced(place) && NotMarkedAdvanced(secondplace)
+          && NotMarkedAdvanced(thirdplace) && NotMarkedAdvanced(fourthplace)) {
           //Because arrays begin with 0 but my objects not
           BigShips[`ship1`][0] = place;
           BigShips[`ship1`][1] = secondplace;
