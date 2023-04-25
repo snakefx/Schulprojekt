@@ -14,10 +14,10 @@
             </table>
         </div>
     </div> 
-    <script src="/JavaScript/Variables_etc.js"></script>   
+    <script src="/JavaScript/variables_etc.js"></script>   
     <script src="/JavaScript/EnemieField.js"></script>
     <script src="/JavaScript/other.js"></script>
     <script src="/JavaScript/auto.js"></script>
     <script src="/JavaScript/table.js"></script>
-    <script src="/Javascript/markings.js"></script>
+    <script src="/JavaScript/markings.js"></script>
 </x-app-layout>

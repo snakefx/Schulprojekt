@@ -1,7 +1,8 @@
 <x-app-layout>
-    <!-- um lokalen server zu starten sodass man die seite sieht schreibt "php artisan serve" in das terminal(ohne semicolons)-->
-    @vite('resources/css/Table.css')
+   <!-- um lokalen server zu starten sodass man die seite sieht schreibt "php artisan serve" in das terminal(ohne semicolons)-->
+   @vite('resources/css/Table.css')
     @vite('resources/css/other.css')
+   
 
     <div class="ShipBox" >
         <div>
@@ -23,10 +24,10 @@
 
         </div>
     </div>
+ <script src="/JavaScript/variables_etc.js"></script>
     <script src="/JavaScript/EnemieField.js"></script>
-    <script src="/JavaScript/Variables_etc.js"></script>
     <script src="/JavaScript/other.js"></script>
     <script src="/JavaScript/auto.js"></script>
     <script src="/JavaScript/table.js"></script>
-    <script onload='ChangeAlignment("h")' src="/Javascript/markings.js"></script>
+    <script onload='ChangeAlignment("h")' src="/JavaScript/markings.js"></script>
 </x-app-layout>
