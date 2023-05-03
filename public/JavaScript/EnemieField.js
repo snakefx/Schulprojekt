@@ -20,7 +20,18 @@ function BeginGame() {
   }
 
   if (counter2 === 0) {
-    location.replace("/ship/show");
+    document.getElementById("table2").style.visibility = "visible";
+    document.getElementById("EtableH").style.visibility = "visible";
+    document.getElementById("TinyShipButton").style.visibility = "hidden";
+    document.getElementById("SmallShipButton").style.visibility = "hidden";
+    document.getElementById("MediumShipButton").style.visibility = "hidden";
+    document.getElementById("BigShipButton").style.visibility = "hidden";
+    document.getElementById("h").style.visibility = "hidden";
+    document.getElementById("v").style.visibility = "hidden";
+    document.getElementById("Autoplacement").style.visibility = "hidden";
+    document.getElementById("BeginGame").style.visibility = "hidden";
+    document.getElementById("label2").style.visibility = "hidden";
+    document.getElementById("label1").style.visibility = "hidden";
   }
   else {
     alert("not all ships assigned");

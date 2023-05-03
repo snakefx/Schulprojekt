@@ -68,3 +68,6 @@ label {
 #TinyShipButton {
     margin-left: 100px;
 }
+.EnemieTable{
+    visibility: hidden;
+}

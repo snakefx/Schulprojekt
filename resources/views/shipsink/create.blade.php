@@ -12,15 +12,23 @@
             <!-- buttons um auszuwählen welches schiff platziert wird( benötigt verbesserungen) -->
             <button id="MediumShipButton" onclick="PlaceMediumShip()">2 Medium Ships available</button>
             <button id="BigShipButton" onclick="PlaceBigShip()">1 Big Ship available</button>
-            <label for="horizontal">Horizontal</label>
+            <label id="label1" for="horizontal">Horizontal</label>
             <!-- labels und radiobuttons um auszuwählen ob schiff horizontal oder vertical platziert wird-->
             <input type="radio" name="horizontal" id="h" onclick="ChangeAlignment('h')" />
-            <label for="vertical">Vertical</label>
+            <label id="label2" for="vertical">Vertical</label>
             <input type="radio" name="vertical" id="v" onclick="ChangeAlignment('v')" />
-            <button onclick="AutoPlacement()">Auto Placement</button>
-            <button onclick="BeginGame()">Begin Game</button>
-            <table id="table1">
+            <button id="Autoplacement" onclick="AutoPlacement()">Auto Placement</button>
+            <button id="BeginGame" onclick="BeginGame()">Begin Game</button>
+            <div >
+            <h2>Dein Feld</h2>
+            <table id="table1" >
             </table>
+        </div class="EnemieTable">
+            <div>
+            <h2 id="EtableH" class="EnemieTable">Gegner Feld</h2>
+            <table id="table2" class="EnemieTable">
+            </table>
+        </div>
 
         </div>
     </div>

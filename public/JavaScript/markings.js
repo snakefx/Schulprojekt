@@ -77,7 +77,16 @@ function NotMarkedAdvanced(place) {// testet umligende und angeklicktes feld tru
     return false;
   }
 }
-
+function MarkMyShips() {
+  let mark;
+  for (counter=1;counter<6;counter++)
+  {//SmallShips[`ship${specialcounter}`]
+    console.log(TinyShips.ship1);
+   // document.getElementById(mark).style.backgroundColor = "green";
+    
+  }
+}
+MarkMyShips();
 
 
 function ShotIndicator(place) {

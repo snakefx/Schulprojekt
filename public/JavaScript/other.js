@@ -120,6 +120,7 @@ function TableClick(place) { // wenn man ein feld auswählt wird hier die gewäh
           alert("error");
         }
       }
+      
 
     }
   }
